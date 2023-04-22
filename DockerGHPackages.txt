@@ -1,0 +1,13 @@
+To upload docker images to github:
+
+1.Tag the image with ghcr.io/<githubusername>/
+	docker tag restapi:v1 ghcr.io/paultimothy12/restapi:v1
+
+2.Authenticate first,
+	echo "<PAT>" | docker login ghcr.io -u paultimothy12 --password-stdin
+
+3.Push the image,
+	docker push ghcr.io/paultimothy12/restapi:v1
+
+4.Image pull from github,
+	docker pull ghcr.io/paultimothy12/restapi:v1
